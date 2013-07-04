@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: email, mail, login, fast, choice, autenticazione, username, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 1.0
-Stable tag: 1.0
+Version: 1.0.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,9 @@ Yes, you will. This plugin let you still log-in with your username. In fact, you
 
 
 == Changelog ==
+= Versione 1.0.1 04/07/2013 =
+* Fixed bug causing some crash
+* Added Presstrends I/O
 = Versione 1.0 03/07/2013 =
 * Plugin Launch - First Version
 
