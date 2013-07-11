@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: email, mail, login, fast, choice, autenticazione, username, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 1.2
-Stable tag: 1.2
+Version: 1.2.1
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,9 +19,10 @@ This simple and lightweight plugin will make the login process more efficient an
 Attention - After activating this plugin you can still log-in with your username!
 
 = Translations included =
-English -> Username
-Italian -> Nome utente
-French -> Identifiant
+
+* English -> Username
+* Italian -> Nome utente
+* French -> Identifiant
 
 If you want your language included, please send the string to milesimarco [AT] outlook.com
 
@@ -39,6 +40,9 @@ Yes, you will. This plugin let you still log-in with your username. In fact, you
 
 
 == Changelog ==
+= Version 1.2.1 =
+* ReadMe corrected
+
 = Version 1.2 =
 * Fixed minor bugs
 

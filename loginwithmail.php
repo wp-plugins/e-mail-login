@@ -2,7 +2,7 @@
 /*
 Plugin Name: E-Mail Login
 Description: Log-in to your wordpress site using the e-mail address or classic username. Simply and efficient.
-Version: 1.2
+Version: 1.2.1
 Author: Marco Milesi
 */
  
