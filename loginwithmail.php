@@ -2,7 +2,7 @@
 /*
 Plugin Name: E-Mail Login
 Description: Log-in to your wordpress site using the e-mail address or classic username. Simply and efficient.
-Version: 1.0.2.1
+Version: 1.2
 Author: Marco Milesi
 */
  
@@ -19,9 +19,18 @@ function mml_mail_login( $user, $username, $password ) {
 add_filter( 'gettext', 'mml_login_hack', 20, 3 );
 
 function mml_login_hack( $translated_text, $text, $domain ) {
-    if ( "Username" == $translated_text )
-        $translated_text .= __( ' or Email');
+    if ( "Username" == $translated_text ) {
+        $translated_text .= __( ' or email');
     return $translated_text;
+	} elseif ( "Identifiant" == $translated_text ) {
+        $translated_text .= __( ' ou email');
+    return $translated_text;
+	} elseif ( "Nome utente" == $translated_text ) {
+        $translated_text .= __( ' o email');
+    return $translated_text;
+	} else {
+	return $translated_text;
+	}
 }
 
 	function presstrends_Maillogin_plugin() {
