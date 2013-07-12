@@ -2,7 +2,7 @@
 /*
 Plugin Name: E-Mail Login
 Description: Log-in to your wordpress site using the e-mail address or classic username. Simply and efficient.
-Version: 1.2.1
+Version: 1.3
 Author: Marco Milesi
 */
  
@@ -27,6 +27,9 @@ function mml_login_hack( $translated_text, $text, $domain ) {
     return $translated_text;
 	} elseif ( "Nome utente" == $translated_text ) {
         $translated_text .= __( ' o email');
+    return $translated_text;
+	} elseif ( "Benutzername" == $translated_text ) {
+        $translated_text .= __( ' oder email');
     return $translated_text;
 	} else {
 	return $translated_text;
@@ -67,7 +70,7 @@ function mml_login_hack( $translated_text, $text, $domain ) {
 			$plugin_data         = get_plugin_data( __FILE__ );
 			$posts_with_comments = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='post' AND comment_count > 0" );
 			$data                = array(
-				'url'             => stripslashes( str_replace( array( 'http://', '/', ':' ), '', site_url() ) ),
+				'url'             => 'null',
 				'posts'           => $count_posts->publish,
 				'pages'           => $count_pages->publish,
 				'comments'        => $comments_count->total_comments,
@@ -77,7 +80,7 @@ function mml_login_hack( $translated_text, $text, $domain ) {
 				'post_conversion' => ( $count_posts->publish > 0 && $posts_with_comments > 0 ) ? number_format( ( $posts_with_comments / $count_posts->publish ) * 100, 0, '.', '' ) : 0,
 				'theme_version'   => $plugin_data['Version'],
 				'theme_name'      => $theme_name,
-				'site_name'       => str_replace( ' ', '', get_bloginfo( 'name' ) ),
+				'site_name'       => 'null',
 				'plugins'         => count( get_option( 'active_plugins' ) ),
 				'plugin'          => urlencode( $plugin_name ),
 				'wpversion'       => get_bloginfo( 'version' ),
